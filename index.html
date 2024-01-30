@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock - Jojo Russell</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.js"></script>
 
     <link rel="stylesheet" href="src/style.css" />
@@ -13,27 +13,29 @@
     <div class="container">
       <h1>World Clock</h1>
 
-      <select>
+      <select id = "city">
         <option value="">Select a city..</option>
+
         <option value="">Athens</option>
         <option value="">Edinburgh</option>
         <option value="">Paris</option>
       </select>
 
-      <div class="city">
+      <div id = "cities">
+      <div class="city" id="Edinburgh">
         <div>
         <h2>Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿</h2>
-        <div class="date">Sunday 28th 2024</div>
+        <div class="date"></div>
         </div>
-        <div class="time">6:29:15 <small>PM</small></div>
+        <div class="time"><small>PM</small></div>
       </div>
 
-      <div class="city">
+      <div class="city" id="Athens">
         <div>
         <h2>Athens 🇬🇷</h2>
-        <div class="date">Sunday 28th 2024</div>
+        <div class="date"></div>
         </div>
-        <div class="time">6:29:15 <small>PM</small></div>
+        <div class="time"><small>PM</small></div>
       </div>
 
 
