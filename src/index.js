@@ -46,3 +46,28 @@ athensTimeElement.innerHTML = athensTime.format(
   setInterval(updateTime, 1000);
   let citiesSelectElement = document.querySelector("#city");
   citiesSelectElement.addEventListener("change", updateCity);
+
+  // Function to change background based on time
+function changeBackgroundBasedOnTime() {
+  let currentTime = new Date();
+  let currentHour = currentTime.getHours();
+  let isDaytime = currentHour >= 6 && currentHour < 18;
+
+
+  // Convert current hour to 12-hour format
+  let displayHour = currentHour % 12 || 12; // Handle 0 as 12 in 12-hour format
+
+  if (isDaytime) {
+    document.body.style.backgroundImage =
+      "url('src/images/chuttersnap-TSgwbumanuE-unsplash.jpg')";
+  } else {
+    document.body.style.backgroundImage =
+      "url('src/images/guille-pozzi-sbcIAn4Mn14-unsplash.jpg')";
+  }
+}
+
+// Call the function when the page loads
+window.onload = changeBackgroundBasedOnTime;
+
+// Update the background when the time changes
+setInterval(changeBackgroundBasedOnTime, 60000); // Update every minute
